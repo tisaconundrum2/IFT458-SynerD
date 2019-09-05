@@ -1,2 +1,2 @@
 # IFT458-SynerD
-Wireframe for the main page of an imaginary charity organization
+Webpage for the imaginary charity organization
