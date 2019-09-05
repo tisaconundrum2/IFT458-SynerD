@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -81,7 +81,52 @@
             width: 160px;
             height: 120px;
         }
-        
+        /* The Modal (background) */
+        .modalform {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #btnjoin{
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+            color: #0000EE;
+        }
     </style>
 </head>
 <body>
@@ -93,7 +138,7 @@
 <div class="container" style="background-color: #FFFFFF">
     <div class="row">
         <div class="col-4">
-            <img src="https://raw.githubusercontent.com/tisaconundrum2/IFT458-SynerD/master/logo.png">
+          	<img src="https://raw.githubusercontent.com/tisaconundrum2/IFT458-SynerD/master/logo.png">
             <h1>synerD</h1>
             </br>
             <h2>Synergy of Diaspora</h2>
@@ -108,8 +153,8 @@
                 <button type="button" class="btn btn-outline-primary">DONATE</button>
             </h3>
             </p>
-            <p>
-                <a href="join_us.html">Join Us</a>
+            <p>                
+                <button id="btnjoin">Join Us</button>
                 |
                 <a href="sign_in.html">Sign In</a>
             </p>
@@ -220,7 +265,72 @@
         <a href="privacy.html">Privacy Policy</a>|
         <a href="copyright.html">Copyright &copy; 2019</a>
     </div>
-    <script src="" async defer></script>
+  	<div id="modalform" class="modal">
+    	<div class="modal-content">
+    		<span class="close">&times;</span>
+            <form>
+                User name:</br>
+                <input type="text" name="username" pattern="([a-zA-Z0-9_-]){1,8}" required></br>
+                Password:</br>
+                <input type="password" name="password" pattern="([0-9]+[a-z]+[A-Z]+){1,8}"required><br>
+                First Name:<br>
+                <input type="text" name="firstname"><br>
+                Middle Name:<br>
+                <input type="text" name="middlename"><br>
+                Last Name:<br>
+                <input type="text" name="lastname" required><br>
+                Gender:<br>
+                <input type="text" name="gender" required><br>
+                Street Address:<br>
+                <input type="text" name="streetaddress" required><br>
+                City:<br>
+                <input type="text" name="city" required><br>
+                State:<br>
+                <input type="text" name="state" required><br>
+                Zip Code:<br>
+                <input type="number" name="zipcode" required><br>
+                Email:<br>
+                <input type="email" name="email" required><br>
+                Cell Phone Number(xxx-xxx-xxxx):<br>
+                <input type="tel" name="cellnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+                Country of Origin:<br>
+                <input type="text" name="country" required><br>
+                Date of Birth:<br>
+                <input type="date" name="dob" required><br>
+                Member Organization:<br>
+                <input type="text" name="organization"><br>
+                <input type="submit" value="Submit">
+            </form>
+    	</div>
+    </div>
+  
+    <script>
+        // Get the modal
+        var modal = document.getElementById("modalform");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("btnjoin");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal 
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+    </script>
 </div>
 </body>
 </html>
