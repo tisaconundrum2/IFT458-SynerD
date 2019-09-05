@@ -127,6 +127,58 @@
             display: inline-block;
             color: #0000EE;
         }
+        /* Drop Down List */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: blue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: peachpuff;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /*End Drop Down Style*/
     </style>
 </head>
 <body>
@@ -162,13 +214,25 @@
         </div>
     </div>
     <hr>
-    <div class="row justify-content-end">
+<!--     <div class="row justify-content-end">
         <div class="col-8 text-md-right">
             <a href="our_work.html">OUR WORK</a>
             <a href="members.html">MEMBERS</a>
             <a href="resources.html">RESOURCES</a>
         </div>
-    </div>
+    </div> -->
+    <ul>
+        <li><a href="#ourwork">OUR WORK</a></li>
+        <li><a href="#members">MEMBERS</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">RESOURCES</a>
+          <div class="dropdown-content">
+            <a href="#aboutus">About Us</a>
+            <a href="#terms">Terms and conditions</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+        </li>
+    </ul>
     <hr>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
