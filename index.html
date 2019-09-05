@@ -33,37 +33,48 @@
             padding-right: 10px;
             padding-left: 10px;
         }
+
         body {
-            background-image: url("https://img.freepik.com/free-vector/colorful-memphis-design-background-vector_53876-81744.jpg?size=626&ext=jpg");
-            background-color: #FFDEAD;
+            background: url(https://img.freepik.com/free-vector/colorful-memphis-design-background-vector_53876-81744.jpg?size=626&ext=jpg) no-repeat center center;
+            background-size: cover;
             background-repeat: no-repeat;
-            background-size: auto;
         }
+
         .medium {
             height: 100px;
         }
-        .container{
+
+        .container {
             background-color: #FFFFFF;
             border-style: solid;
             border-color: black;
         }
-        .content{
+
+        .content {
             background-color: #FFFFFF;
             column-count: 2;
         }
-        .leftcontent{
+
+        .leftcontent {
             border-style: solid;
             border-color: black;
             text-align: center;
         }
-        .rightcontent{
+
+        .rightcontent {
             border-style: solid;
             border-color: black;
             text-align: center;
             display: block;
+        }
 
         .grey {
             background-color: #f5f5f5;
+        }
+
+        .leftcenter {
+            text-align: center;
+            font-size: larger
         }
     </style>
 </head>
@@ -139,9 +150,9 @@
     <div class="row">
         <div class="col-7">
             <div class="row">
-                <div class="col medium grey">ID Protection</div>
-                <div class="col medium">Corpses Repatriation</div>
-                <div class="col medium grey">Assistance Programs</div>
+                <div class="col medium grey leftcenter">ID Protection</div>
+                <div class="col medium leftcenter">Corpses Repatriation</div>
+                <div class="col medium grey leftcenter">Assistance Programs</div>
             </div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -151,9 +162,17 @@
         </div>
         <div class="col">
             <p>What's New?</p>
-            <div class="verticaltabs">
-                <button type="button">Announcements</button>
-                <button type="button">Feature News</button>
+            <div class="col">
+                <h4>Announcements:</h4>
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident
+            </div>
+            <div class="col" style="padding-top: 20px">
+                <h4>Feature News</h4>
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident
             </div>
         </div>
     </div>
@@ -182,7 +201,7 @@
         <a href="sitemap.html">Site Map</a>
         <a href="termsconditions.html">Terms & Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
-        <a href="copyright.html">Copyright &copy;2019</a>
+        <a href="copyright.html">Copyright &copy; 2019</a>
     </div>
     <script src="" async defer></script>
 </div>
