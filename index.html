@@ -30,6 +30,27 @@
         body{
             background-image: url("https://img.freepik.com/free-vector/colorful-memphis-design-background-vector_53876-81744.jpg?size=626&ext=jpg");
             background-color: #FFDEAD;
+            
+        }
+        .container{
+            background-color: #FFFFFF;
+            border-style: solid;
+            border-color: black;
+        }
+        .content{
+            background-color: #FFFFFF;            
+            column-count: 2;
+        }
+        .leftcontent{
+            border-style: solid;
+            border-color: black;
+            text-align: center;
+        }
+        .rightcontent{
+            border-style: solid;
+            border-color: black;
+            text-align: center;
+            display: block;
         }
     </style>
 </head>
@@ -111,23 +132,26 @@
     </a>
 </div>
 
-<div class="leftcontent">
-    <div class="horizontaltabs">
-        <button type="button">ID Protection</button>
-        <button type="button">Corpses Repatriation</button>
-        <button type="button">Assistance Programs</button>
+<div class="content">
+    <div class="leftcontent">
+        <div class="horizontaltabs">
+            <button type="button">ID Protection</button>
+            <button type="button">Corpses Repatriation</button>
+            <button type="button">Assistance Programs</button>
+        </div>
+        <div class="narrative">
+            <p>Narrative for the selected tab</p>
+        </div>
     </div>
-    <div class="narrative">
-        <p>Narrative for the selected tab</p>
+    <div class="rightcontent">
+        <p>What's New?</p>
+        <div class="verticaltabs">
+            <button type="button">Announcements</button>
+            <button type="button">Feature News</button>
+        </div>
     </div>
 </div>
-<div class="rightcontent">
-    <p>What's New?</p>
-    <div class="verticaltabs">
-        <button type="button">Announcements</button>
-        <button type="button">Feature News</button>
-    </div>
-</div>
+
 <div class="featuredactivity">
     <p>Featured Activity</p>
 </div>
