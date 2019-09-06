@@ -9,7 +9,6 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js">
 <!--<![endif]-->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,11 +75,13 @@
             text-align: center;
             font-size: larger
         }
-        .col-4 img{
+
+        .col-4 img {
             float: left;
             width: 160px;
             height: 120px;
         }
+
         /* The Modal (background) */
         .modalform {
             display: none; /* Hidden by default */
@@ -91,8 +92,8 @@
             width: 100%; /* Full width */
             height: 100%; /* Full height */
             overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
         }
 
         /* Modal Content/Box */
@@ -118,7 +119,8 @@
             text-decoration: none;
             cursor: pointer;
         }
-        #btnjoin{
+
+        #btnjoin {
             border: none;
             background-color: inherit;
             padding: 14px 28px;
@@ -127,58 +129,67 @@
             display: inline-block;
             color: #0000EE;
         }
-        /* Drop Down List */
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+
+        /* Style The Dropdown Button */
+        .dropbtn {
             background-color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
         }
 
-        li {
-            float: left;
-        }
-
-        li a, .dropbtn {
-            display: inline-block;
-            color: blue;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover, .dropdown:hover .dropbtn {
-            background-color: peachpuff;
-        }
-
-        li.dropdown {
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
             display: inline-block;
         }
 
+        /* Dropdown Content (Hidden by Default) */
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
 
+        /* Links inside the dropdown */
         .dropdown-content a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
-            text-align: left;
         }
 
-        .dropdown-content a:hover {background-color: #f1f1f1;}
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #fde9ea
+        }
 
+        /* Show the dropdown menu on hover */
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        /*End Drop Down Style*/
+
+        .btn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .nondropbtn:hover {
+            background-color: #fde9ea;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: #fde9ea;
+        }
     </style>
 </head>
 <body>
@@ -190,7 +201,7 @@
 <div class="container" style="background-color: #FFFFFF">
     <div class="row">
         <div class="col-4">
-          	<img src="https://raw.githubusercontent.com/tisaconundrum2/IFT458-SynerD/master/logo.png">
+            <img src="https://raw.githubusercontent.com/tisaconundrum2/IFT458-SynerD/master/logo.png">
             <h1>synerD</h1>
             </br>
             <h2>Synergy of Diaspora</h2>
@@ -205,7 +216,7 @@
                 <button type="button" class="btn btn-outline-primary">DONATE</button>
             </h3>
             </p>
-            <p>                
+            <p>
                 <button id="btnjoin">Join Us</button>
                 |
                 <a href="sign_in.html">Sign In</a>
@@ -214,25 +225,16 @@
         </div>
     </div>
     <hr>
-<!--     <div class="row justify-content-end">
-        <div class="col-8 text-md-right">
-            <a href="our_work.html">OUR WORK</a>
-            <a href="members.html">MEMBERS</a>
-            <a href="resources.html">RESOURCES</a>
-        </div>
-    </div> -->
-    <ul>
-        <li><a href="#ourwork">OUR WORK</a></li>
-        <li><a href="#members">MEMBERS</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">RESOURCES</a>
-          <div class="dropdown-content">
+    <a class="btn nondropbtn" href="#ourwork">OUR WORK</a>
+    <a class="btn nondropbtn" href="#members">MEMBERS</a>
+    <div class="dropdown">
+        <button class="btn dropbtn">RESOURCES</button>
+        <div class="dropdown-content">
             <a href="#aboutus">About Us</a>
             <a href="#terms">Terms and conditions</a>
             <a href="#contact">Contact Us</a>
-          </div>
-        </li>
-    </ul>
+        </div>
+    </div>
     <hr>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -302,99 +304,97 @@
         consequat. Duis aute irure dolor in reprehenderit in voluptate
     </div>
     <p style="padding-top: 100px">
-    <div class="row">
-        <div class="col">
-            <p>synerD</p>
-            <p>Address</p>
-            <p>Phone</p>
-            <p>Email</p>
-            <p>Website</p>
-        </div>
-        <div class="col">
-            <p><a href="getinvolved.html">Get Involved</a></p>
-            <p><a href="blog.html">Blog</a></p>
-            <p><a href="waystogive.html">Ways to Give</a></p>
-        </div>
-        <div class="col">
-            <p><a href="aboutus.html">About Us</a></p>
-            <p><a href="Revenues">Revenues</a></p>
-            <p><a href="expenditures.html">Expenditures</a></p>
-        </div>
+        <div class="row">
+            <div class="col">
+    <p>synerD</p>
+    <p>Address</p>
+    <p>Phone</p>
+    <p>Email</p>
+    <p>Website</p>
+</div>
+<div class="col">
+    <p><a href="getinvolved.html">Get Involved</a></p>
+    <p><a href="blog.html">Blog</a></p>
+    <p><a href="waystogive.html">Ways to Give</a></p>
+</div>
+<div class="col">
+    <p><a href="aboutus.html">About Us</a></p>
+    <p><a href="Revenues">Revenues</a></p>
+    <p><a href="expenditures.html">Expenditures</a></p>
+</div>
+</div>
+<div class="" style="text-align: center; padding-top: 50px">
+    <a href="sitemap.html">Site Map</a>|
+    <a href="termsconditions.html">Terms & Conditions</a>|
+    <a href="privacy.html">Privacy Policy</a>|
+    <a href="copyright.html">Copyright &copy; 2019</a>
+</div>
+<div id="modalform" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form>
+            User name(less than 8 characters):</br>
+            <input type="text" name="username" pattern="([a-zA-Z0-9_-]){1,8}" required></br>
+            Password(less than 8 characters, at least 1 digit, 1 lowercase, 1 uppercase):</br>
+            <input type="password" name="password" pattern="([0-9]+[a-z]+[A-Z]+){3,8}" required><br>
+            First Name:<br>
+            <input type="text" name="firstname"><br>
+            Middle Name:<br>
+            <input type="text" name="middlename"><br>
+            Last Name:<br>
+            <input type="text" name="lastname" required><br>
+            Gender:<br>
+            <input type="text" name="gender" required><br>
+            Street Address:<br>
+            <input type="text" name="streetaddress" required><br>
+            City:<br>
+            <input type="text" name="city" required><br>
+            State:<br>
+            <input type="text" name="state" required><br>
+            Zip Code:<br>
+            <input type="number" name="zipcode" required><br>
+            Email:<br>
+            <input type="email" name="email" required><br>
+            Cell Phone Number(xxx-xxx-xxxx):<br>
+            <input type="tel" name="cellnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+            Country of Origin:<br>
+            <input type="text" name="country" required><br>
+            Date of Birth:<br>
+            <input type="date" name="dob" required><br>
+            Member Organization:<br>
+            <input type="text" name="organization"><br>
+            <input type="submit" value="Submit">
+        </form>
     </div>
-    <div class="bottomcontainer">
-    </div>
-    <div class=""  style="text-align: center; padding-top: 50px">
-        <a href="sitemap.html">Site Map</a>|
-        <a href="termsconditions.html">Terms & Conditions</a>|
-        <a href="privacy.html">Privacy Policy</a>|
-        <a href="copyright.html">Copyright &copy; 2019</a>
-    </div>
-  	<div id="modalform" class="modal">
-    	<div class="modal-content">
-    		<span class="close">&times;</span>
-            <form>
-                User name(less than 8 characters):</br>
-                <input type="text" name="username" pattern="([a-zA-Z0-9_-]){1,8}" required></br>
-                Password(less than 8 characters, at least 1 digit, 1 lowercase, 1 uppercase):</br>
-                <input type="password" name="password" pattern="([0-9]+[a-z]+[A-Z]+){3,8}"required><br>
-                First Name:<br>
-                <input type="text" name="firstname"><br>
-                Middle Name:<br>
-                <input type="text" name="middlename"><br>
-                Last Name:<br>
-                <input type="text" name="lastname" required><br>
-                Gender:<br>
-                <input type="text" name="gender" required><br>
-                Street Address:<br>
-                <input type="text" name="streetaddress" required><br>
-                City:<br>
-                <input type="text" name="city" required><br>
-                State:<br>
-                <input type="text" name="state" required><br>
-                Zip Code:<br>
-                <input type="number" name="zipcode" required><br>
-                Email:<br>
-                <input type="email" name="email" required><br>
-                Cell Phone Number(xxx-xxx-xxxx):<br>
-                <input type="tel" name="cellnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
-                Country of Origin:<br>
-                <input type="text" name="country" required><br>
-                Date of Birth:<br>
-                <input type="date" name="dob" required><br>
-                Member Organization:<br>
-                <input type="text" name="organization"><br>
-                <input type="submit" value="Submit">
-            </form>
-    	</div>
-    </div>
-  
-    <script>
-        // Get the modal
-        var modal = document.getElementById("modalform");
+</div>
 
-        // Get the button that opens the modal
-        var btn = document.getElementById("btnjoin");
+<script>
+    // Get the modal
+    var modal = document.getElementById("modalform");
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+    // Get the button that opens the modal
+    var btn = document.getElementById("btnjoin");
 
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function() {
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
         modal.style.display = "block";
-        }
+    }
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
         modal.style.display = "none";
-        }
+    }
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
-        }
-    </script>
+    }
+</script>
 </div>
 </body>
 </html>
