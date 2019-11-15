@@ -20,6 +20,7 @@ Features
 -   Start serving on localhost running:
 
 ```
+  $ python manage.py migrate
   $ python manage.py runserver
 ```
     
