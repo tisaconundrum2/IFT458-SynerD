@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'synerD',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,12 @@ DATABASES = {
     }
 }
 
+# REST API
+
+REST_FRAMEWORK = {
+        'DEFAULT_PERMISSION_CLASSES':
+        ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
