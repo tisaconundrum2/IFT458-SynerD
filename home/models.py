@@ -6,6 +6,7 @@ class Office(models.Model):
     officename = models.CharField(max_length=50)
     attribution = models.CharField(max_length=50)
 
+
 class Organization(models.Model):
     organization_code = models.CharField(max_length=50, primary_key=True)
     organization_name = models.CharField(max_length=50)
@@ -16,7 +17,8 @@ class Organization(models.Model):
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
     zipcode = models.CharField(max_length=50)
-    phone_number = models.CharField(max_length=50)           
+    phone_number = models.CharField(max_length=50)
+
 
 class Service(models.Model):
     servicecode = models.CharField(max_length=50, primary_key=True)
@@ -30,9 +32,10 @@ class SubscriptionType(models.Model):
     subscriptiontypecode = models.CharField(max_length=50, primary_key=True)
     subscriptiontypename = models.CharField(max_length=50)
 
+
 class UserInfo(models.Model):
     username = models.CharField(max_length=50, primary_key=True)
-    first_name= models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50)
     middlename = models.CharField(max_length=50)
     lastname = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
@@ -76,31 +79,30 @@ class TransferredSubscription(models.Model):
     )
 
 
-
 class Officer(models.Model):
     officecode = models.ForeignKey(
         Organization,
         on_delete=models.CASCADE
-        )
+    )
     subscriberID = models.ForeignKey(
         Office,
         on_delete=models.CASCADE
-        )
+    )
     startdate = models.CharField(max_length=50)
     enddate = models.CharField(max_length=50)
 
 
 class OrganizationMember(models.Model):
-    organization_code = models.ForeignKey(Organization, 
+    organization_code = models.ForeignKey(
+        Organization,
         on_delete=models.CASCADE
-	)
+    )
     subscriberID = models.ForeignKey(
-        Subscriber, 
+        Subscriber,
         on_delete=models.CASCADE
-        )
+    )
     startdate = models.CharField(max_length=50)
     enddate = models.CharField(max_length=50)
     nativecountry = models.CharField(max_length=50)
     citizenship = models.CharField(max_length=50)
     isdelegate = models.CharField(max_length=50)
-
